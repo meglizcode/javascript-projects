@@ -15,8 +15,6 @@ if (fuelLevel >= 20000) {
    launchReady = false;
 }
 
-console.log("launchReady = ", launchReady);
-
 if (crewStatus && computerStatus === 'green'){
    console.log('Crew & computer cleared.');
    launchReady = true;
@@ -24,5 +22,16 @@ if (crewStatus && computerStatus === 'green'){
    console.log('WARNING: Crew or computer not ready!');
    launchReady = false;
 }
+if (fuelLevel >= 20000 && crewStatus && computerStatus === 'green') {
+   launchReady = true;
+} else {
+   launchReady = false;
+}
 
-console.log("launchReady = ", launchReady);
+if (launchReady) {
+   console.log(`All tests Cleared: Prepared for Launch`);
+   console.log('10, 9, 8, 7, 6, 5, 4, 3, 2, 1...');
+   console.log('Liftoff!');
+} else {
+   console.log('Launch scrubbed.')
+}

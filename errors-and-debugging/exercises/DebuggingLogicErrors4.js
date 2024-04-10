@@ -3,6 +3,7 @@
 
 // Given the values for fuelLevel, crewStatus and computerStatus, should launchReady be true or false?
 // Is the program behaving as expected?
+//    The program as is, it indicates the last time "launchReady" is called it = true there for falsely calling the shuttle ready for launch 
 
 let launchReady = false;
 let fuelLevel = 17000;
